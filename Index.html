@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Note Taker</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #4f8cff;
+      --primary-dark: #2563eb;
+      --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      --text-main: #2d3a4b;
+      --text-secondary: #4a5a6a;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      background: #fff;
+      padding: 40px 28px;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(60, 72, 88, 0.15);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 32px;
+      margin: 20px 0;
+      border: none;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 2px 8px rgba(79, 140, 255, 0.15);
+    }
+
+    .button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+    }
+
+    .images {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .images img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .images img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .button {
+        width: 100%;
+      }
+      .images img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Brain Break</h1>
+    <button class="button" onclick="window.location.href='About.html'">Take Your Notes</button>
+
+    <div class="images">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.nNjxqYoQkNxHud8BxXE-8wHaE7?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Brain with Gears">
+      <img src="https://i.pinimg.com/originals/1e/79/86/1e7986589c6b23a1b8a700e954319c03.png" alt="Brain with Circuit Board">
+    </div>
+  </div>
+</body>
+</html>
